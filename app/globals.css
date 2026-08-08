@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
-:root { --ink:#071018; --ink-soft:#0c1925; --blue:#0798ff; --blue-2:#5ec4ff; --white:#f5f8fb; --muted:#8c9bab; --line:rgba(255,255,255,.12); --serif: Georgia, "Times New Roman", serif; --arabic:"Tajawal", Tahoma, Arial, sans-serif; }
+:root { --ink:#101113; --ink-soft:#191b1f; --blue:#126ec5; --blue-2:#57a8ee; --gold:#d9a312; --gold-light:#ffd65d; --white:#f8f8f7; --muted:#9b9fa4; --line:rgba(255,255,255,.12); --serif: Georgia, "Times New Roman", serif; --arabic:"Cairo", Tahoma, Arial, sans-serif; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; background:var(--ink); }
 body { margin:0; background:var(--ink); color:var(--white); font-family:var(--arabic); }
@@ -78,3 +78,55 @@ footer { background:#071018; padding:57px max(24px,calc((100vw - 1240px)/2)) 22p
 }
 @media (max-width:600px){.product-grid{grid-template-columns:1fr}.product-art{height:235px}.product-bottle{transform:scale(1)}.why-grid{grid-template-columns:1fr}.why-card,.why-card:nth-child(2){border-left:0}.hero-actions{grid-template-columns:1fr}.hero-actions .button{font-size:13px}.agency-map{height:310px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* LUTON product identity */
+.brand-mark i:nth-child(1),.brand-mark i:nth-child(3){background:var(--gold)}
+.brand-mark i:nth-child(2){background:var(--blue)}
+.hero{background:radial-gradient(circle at 72% 52%,rgba(24,104,184,.3) 0,rgba(16,17,19,0) 38%),linear-gradient(120deg,#0a0b0d 0%,#17191d 60%,#08090b 100%)}
+.hero:after{opacity:.25}
+.eyebrow,.section-kicker,.text-link{color:var(--gold-light)}
+.eyebrow span{background:var(--gold)}
+em{color:var(--gold-light)}
+.button-primary{background:var(--gold);color:#16110a;font-weight:800}
+.button-primary:hover{background:var(--gold-light)}
+.button-ghost{border-color:rgba(255,214,93,.6)}
+.nav a:hover{color:var(--gold-light)}
+.nav-contact{border-color:rgba(255,214,93,.72)!important}
+.hero-stats strong{color:var(--gold-light)}
+.hero-visual{background:#dcdbd8;border:1px solid rgba(255,214,93,.36);box-shadow:0 24px 48px rgba(0,0,0,.38)}
+.hero-visual img{width:100%;max-width:100%;object-fit:cover;object-position:center;mask-image:none;mix-blend-mode:normal;filter:contrast(1.04) saturate(.96)}
+.visual-orbit,.visual-chip{display:none}
+.about-panel-image{background:#e7e5df;isolation:isolate}
+.about-panel-image:after{background:linear-gradient(0deg,rgba(10,10,12,.4),transparent 50%)}
+.about-product-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:contrast(1.02) saturate(.92)}
+.panel-label{color:#506070}.panel-label b{color:#16263b}
+.products{background:#f5f3ee}
+.products .section-kicker{color:#a87800}
+.product-card{border-color:#ded9cf}
+.product-art{background:#deddda;height:270px}
+.product-art:before,.product-art:after{display:none}
+.product-art img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .4s ease}
+.product-card:hover .product-art img{transform:scale(1.035);filter:saturate(1.06)}
+.product-number{z-index:2;left:14px;top:13px;background:rgba(20,22,25,.76);color:var(--gold-light);border-radius:999px;padding:4px 7px}
+.product-kind{color:#82600b;font-weight:700}
+.product-api{background:#f8eed0;color:#966c00}
+.why-icon,.agency-points span,.map-pin span{color:var(--gold-light)}
+.finder-section{background:radial-gradient(circle at 85% 0,rgba(26,109,190,.32),transparent 32%),linear-gradient(135deg,#111215,#202328)}
+.step-dots button.active{background:var(--gold);color:#16110a}
+.step-dots button.done{background:#e5c76e;color:#4c3810}
+.option-grid button:hover{border-color:var(--gold);background:#fffdf5}
+.recommendation h3{color:#a77600}
+.map-route{border-color:#d9a312;border-left-color:transparent;border-bottom-color:transparent;filter:drop-shadow(0 0 6px #d9a312)}
+.contact{background:#f2f0eb}.contact .eyebrow{color:#9f7300}.round-link{border-color:#d8b95d;color:#9a6f00}.round-link:hover{background:#fff7df}
+.whatsapp-float{background:#d9a312;color:#1a1407}.footer-links a:hover{color:var(--gold-light)}
+@media (max-width:800px){
+  .site-header{border-color:rgba(255,214,93,.26);background:rgba(14,15,17,.82)}
+  .nav{background:rgba(16,17,19,.98)}
+  .hero{background:radial-gradient(circle at 50% 60%,rgba(27,104,182,.36),transparent 53%),linear-gradient(145deg,#08090b,#181a1e)}
+  .hero-visual{height:min(108vw,430px);border-radius:22px;background:#d9d8d5}
+  .hero-visual img{object-position:center 45%}
+  .about-product-image{object-position:center}
+  .product-art{height:280px}
+  .product-card:hover .product-art img{transform:none}
+  .finder-card{box-shadow:0 18px 35px rgba(0,0,0,.28)}
+}

@@ -3,12 +3,11 @@
 import { useMemo, useState } from "react";
 
 const products = [
-  { grade: "0W-20", type: "تخليقي بالكامل", api: "API SP", fuel: "بنزين", color: "blue", text: "انسيابية دقيقة للمحركات الحديثة وكفاءة أفضل في استهلاك الوقود." },
-  { grade: "5W-30", type: "شبه تخليقي", api: "API SN Plus", fuel: "بنزين", color: "silver", text: "توازن يومي بين الحماية، الاقتصاد والأداء في مختلف درجات الحرارة." },
-  { grade: "5W-40", type: "تخليقي بالكامل", api: "API SN", fuel: "بنزين", color: "blue", text: "حماية متقدمة للمحركات عالية الأداء والقيادة الطويلة." },
-  { grade: "10W-40", type: "متعدد الاستخدام", api: "API SN/CF", fuel: "بنزين / ديزل", color: "silver", text: "خيار عملي وموثوق للمركبات متوسطة العمر والاستخدام اليومي." },
-  { grade: "20W-50", type: "ديزل", api: "API CH-4", fuel: "ديزل", color: "blue", text: "ثبات وحماية موثوقة لمحركات الديزل في ظروف التشغيل القاسية." },
-  { grade: "HD-50", type: "شاحنات", api: "API CI-4", fuel: "ديزل ثقيل", color: "silver", text: "مصمم للأحمال الثقيلة والمحركات التي تعمل لساعات طويلة." },
+  { grade: "10W-30 / 75W-80", type: "Gear Oil", api: "GL-4", fuel: "زيت تروس", image: "/gear-oil-10l.webp", text: "زيت تروس LUTON للحماية الدقيقة والتشغيل السلس في ظروف الاستخدام اليومية." },
+  { grade: "20W-50", type: "Diesel Engine Oil", api: "API CH-4", fuel: "ديزل", image: "/diesel-cartons.webp", text: "تركيبة ديزل موثوقة للورش والطلبات التجارية، متوفرة ضمن عبوات أصلية." },
+  { grade: "HD-50", type: "Heavy Duty", api: "API CI-4", fuel: "20 لتر", image: "/hd50-blue-20l.webp", text: "عبوة كبيرة مصممة للمحركات التي تعمل تحت ضغط وأحمال عالية." },
+  { grade: "HD-50", type: "Diesel Engine Oil", api: "API CI-4", fuel: "10 لتر", image: "/hd50-product-set.webp", text: "خيار عملي للشاحنات والمركبات التجارية مع حماية ثابتة للمحرك." },
+  { grade: "20W-50 / HD-50", type: "Diesel Range", api: "API CH-4 / CI-4", fuel: "ديزل", image: "/diesel-oil-duo.webp", text: "درجتا لزوجة من مجموعة LUTON لتغطية احتياجات الديزل المختلفة." },
 ];
 
 const finderSteps = [
@@ -90,7 +89,7 @@ export default function Home() {
         </div>
         <div className="hero-visual" role="img" aria-label="عبوات زيوت LUTON للمحركات">
           <div className="visual-orbit orbit-a"></div><div className="visual-orbit orbit-b"></div>
-          <img src="/hero-oil.png" alt="عبوات زيوت LUTON" decoding="async" />
+          <img src="/hd50-product-set.webp" alt="منتجات LUTON الأصلية لزيوت الديزل" decoding="async" />
           <div className="visual-chip">ENGINE<br /><b>PROTECTION</b></div>
         </div>
         <a className="scroll-cue" href="#about">اكتشف المزيد <span>↓</span></a>
@@ -103,7 +102,7 @@ export default function Home() {
           <div><p>تقدم LUTON Lubricants حلول تزييت مصممة لظروف القيادة اليومية والعمل الشاق. نختار تركيبات متوازنة تساعد على حماية المحرك والمحافظة على أدائه.</p><a className="text-link" href="#agency">تعرف على وكالتنا <b>←</b></a></div>
         </div>
         <div className="about-grid">
-          <div className="about-panel about-panel-image"><div className="panel-label">LUTON<br /><b>PERFORMANCE</b></div><div className="oil-ring"></div><div className="about-bottles"><span></span><span></span><span></span></div></div>
+          <div className="about-panel about-panel-image"><div className="panel-label">LUTON<br /><b>ORIGINAL PRODUCTS</b></div><img className="about-product-image" src="/diesel-cartons.webp" alt="كرتون منتجات LUTON الأصلية" loading="lazy" /></div>
           <div className="about-panel about-panel-copy"><p className="eyebrow"><span></span> معيارنا هو الثقة</p><h3>زيت صحيح.<br />محرك أقوى.</h3><p>من زيوت البنزين والديزل إلى زيوت التروس، نوفّر مجموعة متكاملة للمركبات الخاصة والتجارية.</p><div className="feature-list"><div><b>01</b><span>تركيبات عالية الجودة<br /><small>للظروف المتنوعة</small></span></div><div><b>02</b><span>خيارات دقيقة للزوجة<br /><small>لمختلف أنواع المحركات</small></span></div><div><b>03</b><span>توزيع داخل سوريا<br /><small>للجملة والمفرق</small></span></div></div></div>
         </div>
       </section>
@@ -111,8 +110,8 @@ export default function Home() {
       <section className="section products" id="products">
         <div className="section-heading"><div><div className="section-kicker">مجموعة المنتجات</div><h2>لكل محرك<br /><em>خيار أدق</em></h2></div><p>درجات لزوجة مختارة بعناية لتلائم طبيعة مركبتك وأسلوب قيادتك.</p></div>
         <div className="product-grid">
-          {products.map((product, index) => <article className="product-card" key={product.grade}>
-            <div className={`product-art ${product.color}`}><span className="product-number">0{index + 1}</span><div className="product-bottle"><i>LUTON</i><b>{product.grade}</b><small>{product.fuel}</small></div></div>
+          {products.map((product, index) => <article className="product-card" key={`${product.grade}-${product.type}`}>
+            <div className="product-art"><span className="product-number">0{index + 1}</span><img src={product.image} alt={`${product.type} ${product.grade}`} loading="lazy" /></div>
             <div className="product-info"><div><span className="product-kind">{product.type}</span><h3>{product.grade}</h3></div><span className="product-api">{product.api}</span><p>{product.text}</p></div>
           </article>)}
         </div>
