@@ -56,13 +56,14 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#home" aria-label="LUTON الصفحة الرئيسية">
+        <a className="brand" href="#home" aria-label="شركة عبيد التجارية الصفحة الرئيسية">
           <span className="brand-mark"><i></i><i></i><i></i></span>
-          <span>LUTON<small>Lubricants Syria</small></span>
+          <span className="brand-copy"><strong>شركة عبيد التجارية</strong><small>زيوت وفلاتر • وكيل LUTON</small></span>
         </a>
         <button className={menuOpen ? "menu-button open" : "menu-button"} type="button" aria-label="فتح قائمة التنقل" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           <span></span><span></span><span></span>
         </button>
+        {menuOpen && <button className="nav-backdrop" type="button" aria-label="إغلاق قائمة التنقل" onClick={() => setMenuOpen(false)} />}
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="التنقل الرئيسي">
           {[['عن لوتون', '#about'], ['المنتجات', '#products'], ['لماذا لوتون؟', '#why'], ['اختيار الزيت', '#finder'], ['الوكالة', '#agency']].map(([label, href]) => (
             <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
@@ -74,7 +75,7 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="hero-glow glow-one"></div><div className="hero-glow glow-two"></div>
         <div className="hero-copy">
-          <p className="eyebrow"><span></span> الوكيل الحصري في سوريا</p>
+          <p className="eyebrow"><span></span> شركة عبيد التجارية — وكيل LUTON في سوريا</p>
           <h1>زيوت تحمي<br /><em>كل كيلومتر</em></h1>
           <p className="hero-description">تقنية بريطانية متطورة وحماية يمكن الاعتماد عليها. اختر الزيت الذي يمنح محركك أداءً ثابتاً في كل رحلة.</p>
           <div className="hero-actions">
@@ -99,7 +100,7 @@ export default function Home() {
         <div className="section-kicker">من نحن</div>
         <div className="section-intro split-intro">
           <h2>خبرة عالمية<br />تصل إلى <em>محركك</em></h2>
-          <div><p>تقدم LUTON Lubricants حلول تزييت مصممة لظروف القيادة اليومية والعمل الشاق. نختار تركيبات متوازنة تساعد على حماية المحرك والمحافظة على أدائه.</p><a className="text-link" href="#agency">تعرف على وكالتنا <b>←</b></a></div>
+          <div><p>تقدم شركة عبيد التجارية، قسم الزيوت المعدنية والفلاتر، حلول تزييت LUTON المصممة لظروف القيادة اليومية والعمل الشاق. نختار تركيبات متوازنة تساعد على حماية المحرك والمحافظة على أدائه.</p><a className="text-link" href="#agency">تعرف على وكالتنا <b>←</b></a></div>
         </div>
         <div className="about-grid">
           <div className="about-panel about-panel-image"><div className="panel-label">LUTON<br /><b>ORIGINAL PRODUCTS</b></div><img className="about-product-image" src="/diesel-cartons.webp" alt="كرتون منتجات LUTON الأصلية" loading="lazy" /></div>
@@ -133,12 +134,12 @@ export default function Home() {
 
       <section className="section agency" id="agency">
         <div className="agency-map"><div className="map-grid"></div><div className="map-route"></div><div className="map-pin"><span>●</span><b>كرناز</b><small>حماة — سوريا</small></div><div className="map-note"><span>موقعنا</span><b>نخدم جميع المحافظات</b></div></div>
-        <div className="agency-copy"><div className="section-kicker">الوكالة والتوزيع</div><h2>أقرب إلى<br /><em>عملك</em></h2><p>نقدّم منتجات LUTON الأصلية للورش والمحلات والطلبات التجارية، مع إمكانية التوصيل إلى مختلف المحافظات السورية.</p><div className="agency-points"><div><span>⌖</span><b>الموقع<small>كرناز — حماة — سوريا</small></b></div><div><span>↗</span><b>التوزيع<small>جميع المحافظات السورية</small></b></div><div><span>◷</span><b>الطلبات التجارية<small>خدمة سريعة ومرنة</small></b></div></div><a className="button button-primary" href="https://maps.google.com/?q=Karnaz,Hama,Syria" target="_blank" rel="noreferrer">افتح الخريطة <b>←</b></a></div>
+        <div className="agency-copy"><div className="section-kicker">الوكالة والتوزيع</div><h2>أقرب إلى<br /><em>عملك</em></h2><p>تقدّم شركة عبيد التجارية منتجات LUTON الأصلية للورش والمحلات والطلبات التجارية، مع الزيوت المعدنية والفلاتر وإمكانية التوصيل إلى مختلف المحافظات السورية.</p><div className="agency-points"><div><span>⌖</span><b>الموقع<small>كرناز — حماة — سوريا</small></b></div><div><span>↗</span><b>التوزيع<small>جميع المحافظات السورية</small></b></div><div><span>◷</span><b>الطلبات التجارية<small>خدمة سريعة ومرنة</small></b></div></div><a className="button button-primary" href="https://maps.google.com/?q=Karnaz,Hama,Syria" target="_blank" rel="noreferrer">افتح الخريطة <b>←</b></a></div>
       </section>
 
       <section className="contact" id="contact"><div><p className="eyebrow"><span></span> تواصل معنا</p><h2>نساعدك في<br />اختيار <em>الأفضل</em></h2><p>فريق المبيعات جاهز للرد على استفساراتكم وطلبات الجملة والمفرق.</p></div><div className="contact-people"><article><span className="avatar">ع</span><div><small>مدير المبيعات</small><h3>الحاج عمر</h3><a href="tel:+963944780500" dir="ltr">0944 780 500</a></div><a className="round-link" href="https://wa.me/963944780500" target="_blank" rel="noreferrer" aria-label="واتساب الحاج عمر">↗</a></article><article><span className="avatar blue">إ</span><div><small>مندوب المبيعات</small><h3>إبراهيم</h3><a href="tel:+963998665609" dir="ltr">0998 665 609</a></div><a className="round-link" href="https://wa.me/963998665609" target="_blank" rel="noreferrer" aria-label="واتساب إبراهيم">↗</a></article></div></section>
 
-      <footer><div className="footer-main"><a className="brand" href="#home"><span className="brand-mark"><i></i><i></i><i></i></span><span>LUTON<small>Lubricants Syria</small></span></a><p>زيوت محركات بمعايير عالمية. الوكيل الحصري في سوريا.</p><div className="footer-links"><a href="#products">المنتجات</a><a href="#finder">اختيار الزيت</a><a href="#agency">الوكالة</a><a href="#contact">تواصل معنا</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} LUTON Lubricants Syria</span><span>جميع الحقوق محفوظة</span></div></footer>
+      <footer><div className="footer-main"><a className="brand" href="#home"><span className="brand-mark"><i></i><i></i><i></i></span><span className="brand-copy"><strong>شركة عبيد التجارية</strong><small>الزيوت المعدنية والفلاتر</small></span></a><p>شركة عبيد التجارية — قسم الزيوت المعدنية والفلاتر. وكيل LUTON Lubricants في حماة - كرناز.</p><div className="footer-links"><a href="#products">المنتجات</a><a href="#finder">اختيار الزيت</a><a href="#agency">الوكالة</a><a href="#contact">تواصل معنا</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} شركة عبيد التجارية</span><span>جميع الحقوق محفوظة</span></div></footer>
       <a className="whatsapp-float" href="https://wa.me/963944780500" target="_blank" rel="noreferrer" aria-label="تواصل عبر واتساب">⌕<small>واتساب</small></a>
     </main>
   );

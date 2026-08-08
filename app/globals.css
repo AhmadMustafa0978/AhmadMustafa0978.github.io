@@ -11,6 +11,7 @@ main { overflow:hidden; }
 .site-header { width:min(1240px, calc(100% - 48px)); height:82px; position:absolute; z-index:10; top:0; left:50%; transform:translateX(-50%); display:flex; flex-direction:row-reverse; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,.16); }
 .brand { display:flex; align-items:center; gap:11px; direction:ltr; font-weight:900; letter-spacing:-1px; font-size:27px; font-style:italic; line-height:.75; }
 .brand small { display:block; font-size:7px; font-weight:600; font-style:normal; letter-spacing:1.9px; margin-top:8px; color:#99aaba; }
+.brand-copy{direction:rtl;text-align:right;font-style:normal;line-height:1.15}.brand-copy strong{display:block;font-family:var(--arabic);font-size:18px;letter-spacing:-.4px}.brand-copy small{letter-spacing:0;font-family:var(--arabic);font-size:8px;margin-top:4px;white-space:nowrap}
 .brand-mark { width:28px; display:flex; align-items:flex-end; gap:3px; height:25px; transform:skew(-16deg); }
 .brand-mark i { display:block; width:6px; background:var(--blue); border-radius:2px 2px 0 0; }.brand-mark i:nth-child(1){height:11px}.brand-mark i:nth-child(2){height:18px}.brand-mark i:nth-child(3){height:25px}
 .nav { display:flex; gap:28px; align-items:center; font-size:13px; color:#d9e2e9; }.nav a { transition:color .2s ease; }.nav a:hover { color:var(--blue-2); }.nav-contact { border:1px solid rgba(92,197,255,.7); border-radius:999px; padding:10px 17px; color:#ecf8ff !important; }
@@ -44,6 +45,7 @@ footer { background:#071018; padding:57px max(24px,calc((100vw - 1240px)/2)) 22p
   h1,h2,.split-intro h2,.section-heading h2,.why h2,.finder-copy h2,.agency-copy h2,.contact h2,.about-panel-copy h3,.finder-card>h3{font-family:var(--arabic);font-weight:800;letter-spacing:-1.1px;line-height:1.18}
   em{font-style:normal}
   .site-header{position:fixed;width:calc(100% - 24px);height:64px;background:rgba(5,16,27,.78);backdrop-filter:blur(15px);border:1px solid rgba(136,213,255,.18);border-radius:0 0 17px 17px}
+  .brand{gap:7px;min-width:0}.brand-mark{transform:skew(-16deg) scale(.82);transform-origin:center}.brand-copy{min-width:0}.brand-copy strong{font-size:14px;white-space:nowrap}.brand-copy small{font-size:7px;overflow:hidden;text-overflow:ellipsis;max-width:190px}
   .menu-button{display:block;position:relative;z-index:2}
   .menu-button span{transition:transform .25s ease,opacity .2s ease}
   .menu-button.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
