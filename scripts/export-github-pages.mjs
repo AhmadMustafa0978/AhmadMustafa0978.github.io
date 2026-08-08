@@ -9,6 +9,7 @@ const workerUrl = pathToFileURL(resolve(root, "dist/server/index.js"));
 
 await mkdir(outputDir, { recursive: true });
 await cp(clientDir, outputDir, { recursive: true });
+await writeFile(resolve(outputDir, ".nojekyll"), "");
 
 const { default: worker } = await import(`${workerUrl.href}?static=${Date.now()}`);
 const response = await worker.fetch(
