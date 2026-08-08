@@ -61,7 +61,7 @@ export default function Home() {
           <span className="brand-mark"><i></i><i></i><i></i></span>
           <span>LUTON<small>Lubricants Syria</small></span>
         </a>
-        <button className="menu-button" type="button" aria-label="فتح قائمة التنقل" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
+        <button className={menuOpen ? "menu-button open" : "menu-button"} type="button" aria-label="فتح قائمة التنقل" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           <span></span><span></span><span></span>
         </button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="التنقل الرئيسي">
@@ -90,7 +90,7 @@ export default function Home() {
         </div>
         <div className="hero-visual" role="img" aria-label="عبوات زيوت LUTON للمحركات">
           <div className="visual-orbit orbit-a"></div><div className="visual-orbit orbit-b"></div>
-          <img src="/og.png" alt="عبوات زيوت LUTON" />
+          <img src="/hero-oil.png" alt="عبوات زيوت LUTON" decoding="async" />
           <div className="visual-chip">ENGINE<br /><b>PROTECTION</b></div>
         </div>
         <a className="scroll-cue" href="#about">اكتشف المزيد <span>↓</span></a>
